@@ -10,19 +10,38 @@
         <script type="text/javascript" src="scripts/blackjack.client.js"></script>
     </head>
     <body>
-        <h1>Blackjack</h1>
-        <div id="dealerCards">
+        <div style="padding-left: 40%;">
+            <h1>Blackjack</h1>
+
+            <div style="border-style: dashed; width: 30%; padding: 10px;">
+                <p>Dealer</p>
+                <div id="dealerCards">
+                </div>
+                
+                <p>Dealer Score</p>
+                <div id="dealerScore">
+                </div>
+
+            </div>
+            <br>
+
+
+            <div style="border-style: dashed; width: 30%; padding: 10px;">
+                <p>Player</p>
+                <div id="playerCards">
+                </div>
+                <p>score</p>
+                <div id="playerScore">
+                </div>
+
+            </div>
+            <div id="result">
+            </div>
+            <br>
+            <button id="deal">Deal</button>
+            <button id="hit">Hit</button>
+            <button id="stand">Stand</button>
+
         </div>
-        <div id="dealerScore">
-        </div>
-        <div id="playerCards">
-        </div>
-        <div id="playerScore">
-        </div>
-        <div id="result">
-        </div>
-        <button id="deal">Deal</button>
-        <button id="hit">Hit</button>
-        <button id="stand">Stand</button>
     </body>
 </html>
