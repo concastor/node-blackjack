@@ -73,6 +73,14 @@ App.updateResult = function (result) {
 	$("#result").text(displayResult)
 }
 
+App.updateResultAI = function (result) {
+	var displayResult = result
+	if (result === "None") {
+		displayResult = ""
+	}
+	$("#AIresult").text(displayResult)
+}
+
 App.disableButton = function (id) {
 	$(id).attr("disabled", "disabled")
 }
@@ -105,13 +113,16 @@ App.dealResult = function (game) {
 	App.updatePlayer(game.player)
 	App.updateAI(game.ai_player)
 	App.updateResult(game.result)
+	App.updateResultAI(game.AIresult)
 }
 
 App.hitResult = function (game) {
 	App.updateDealer(game.dealer)
 	App.updatePlayer(game.player)
 	App.updateResult(game.result)
+
 	App.updateAI(game.ai_player)
+	App.updateResultAI(game.AIresult)
 
 	App.enableDealIfGameFinished(game.result)
 }
@@ -120,7 +131,9 @@ App.standResult = function (game) {
 	App.updateDealer(game.dealer)
 	App.updatePlayer(game.player)
 	App.updateResult(game.result)
+
 	App.updateAI(game.ai_player)
+	App.updateResultAI(game.AIresult)
 
 	App.enableDealIfGameFinished(game.result)
 }
